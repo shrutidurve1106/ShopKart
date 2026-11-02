@@ -1,9 +1,17 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div> 
-    <h1>Hello, World!</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+      <Footer />
     </div>
   )
 }
@@ -11,3 +19,4 @@ function App() {
 export default App
 
 //index.html -> main.jsx -> App.jsx
+//brower router -> routes -> route -> element
